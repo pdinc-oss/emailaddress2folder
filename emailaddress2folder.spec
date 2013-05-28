@@ -1,6 +1,6 @@
 Name:           emailAddress2Folder
 Version:        1
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        A Perl procmail helper to create Maildir folder names based on the email address of the recipient
 
 Group:          Development/Libraries
@@ -12,8 +12,6 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Requires:	perl(URI)
 Requires:	perl(Email::Address)
-Requires:	procmail
-Requires:	postfix
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 
@@ -62,5 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-1
+- dependency corrections
+
 * Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-0
 - initial build
