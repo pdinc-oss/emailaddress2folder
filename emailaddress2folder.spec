@@ -1,5 +1,5 @@
 Name:           emailAddress2Folder
-Version:        1
+Version:        2
 Release:        1%{?dist}
 Summary:        A Perl procmail helper to create Maildir folder names based on the email address of the recipient
 
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Jan 28 2018 Jason Pyeron <support@pdinc.us> - 2-1
+- added support for TO/FROM based processing
+
 * Tue May 28 2013 Jason Pyeron <support@pdinc.us> - 1-1
 - dependency corrections
 
